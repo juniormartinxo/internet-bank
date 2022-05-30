@@ -263,3 +263,8 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,visualstudiocode,vim,windows,linux
 n
+
+
+# my
+dist
+yarn.lock

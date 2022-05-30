@@ -2,9 +2,13 @@
   "name": "internet-bank",
   "version": "1.0.0",
   "description": "Um banco virtual que funciona totalmente na CLI do NodeJS",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "module",
+  "_moduleAliases": {
+    "foo": "dist"
+  },
   "scripts": {
-    "start": "yarn build && node dist/index.js",
+    "dev": "yarn build && node --experimental-specifier-resolution=node --no-warnings dist/index.js",
     "build": "npx tsc",
     "prepare": "husky install"
   },
@@ -13,7 +17,7 @@
     "url": "git+https://github.com/juniormartinxo/internet-bank.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Junior Martins [https://juniormartins.dev]",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/juniormartinxo/internet-bank/issues"
@@ -24,6 +28,8 @@
     "inquirer": "^8.2.4"
   },
   "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/inquirer": "^8.2.1",
     "@types/node": "^17.0.36",
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
@@ -37,8 +43,10 @@
     "git-commit-msg-linter": "^4.1.3",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.2",
+    "module-alias": "^2.2.2",
     "prettier": "^2.6.2",
     "ts-node": "^10.8.0",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.7.2"
   }
 }
